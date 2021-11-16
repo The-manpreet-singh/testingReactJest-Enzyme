@@ -27,12 +27,16 @@ its use the dev dependecies insatll jest and enzyme and enzyme-adapter.
 ### enzyme setup-
 
 import React from "react";
-import Enzyme from "enzyme";
+import Enzyme, { shallow } from "enzyme";
 import EnzymeAdapter from "enzyme-adapter-react-16";
 import App from "./App";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-test("renders learn react link", () => {
-
+test("renders the test", () => {
+const wrapper = shallow(<App />);
+//throw new Error; // this is for the test fail
+console.log(wrapper.debug()); // this is very helpful debugging
 });
+
+shallow function takes the jsx using the app and rendsering the app.
