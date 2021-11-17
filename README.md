@@ -29,7 +29,7 @@ its use the dev dependecies insatll jest and enzyme and enzyme-adapter.
 we nedd to set data-test attribute inside a div for testing
 for example-
 
-`<div data-test="component-app" className="App">
+````<div data-test="component-app" className="App">
 <h1 data-test="counter-display">
 The counter is currently&nbsp;
 <span data-test="count">{count}</span>
@@ -40,7 +40,7 @@ onClick={() => setCount(count + 1)} >
 Increment counter
 </button>
 
- </div>`
+ </div>````
 
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
@@ -87,3 +87,4 @@ It tests only after the completion of all parts.
 
 h--Unit testing is less costly.
 Integration testing is more costly.
+`````
